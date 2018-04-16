@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>添加服务</title>
+<link rel=stylesheet href="css/demo.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<script src='../common/date/date.js'></script>
+
+<script>
+	function isTNameUnique() {
+		//alert("ok");
+		var req = new XMLHttpRequest();
+		//取出输入的学号
+		var tname = document.getElementsByName("tName")[0].value;
+		//alert(tname);
+		req.onreadystatechange = function() {
+
+			if (req.readyState == 4 && req.status == 200) {
+				var flag = req.responseText;
+				if (flag == 1) {
+					alert("可使用");
+				} else {
+					alert("已存在");
+				}
+			}
+
+		}
+		req.open("GET", "/Corporation/isTNameUniqueSrevlet?tName=" + tname,
+				true);
+		req.send(null);
+	}
+
+	function isPresidentExist() {
+		//alert("ok");
+		var req1 = new XMLHttpRequest();
+		//取出输入的学号
+		var sno = document.getElementsByName("president")[0].value;
+		//alert(sno);
+		req1.onreadystatechange = function() {
+
+			if (req1.readyState == 4 && req1.status == 200) {
+				var flag = req1.responseText;
+				if (flag == 1) {
+					alert("该学生不存在");
+				} else {
+					alert("存在该学生");
+				}
+			}
+
+		}
+		req1
+				.open("GET", "/Corporation/IsPresidentExist?president=" + sno,
+						true);
+		req1.send(null);
+	}
+
+	function go() {
+		window.history.go(-1);
+	}
+</Script>
+
+
+<body topmargin="10" leftmargin="10">
+	<form name="frmAction" method="post" enctype="multipart/form-data"
+		action="/HomeMaking/AddServerServlet">
+		<!--header-->
+		<header>
+		<h1>
+			<img src="images/admin_logo.png" />
+		</h1>
+		<ul class="rt_nav">
+			<li><a href="/Corporation/login.html" class="quit_icon">安全退出</a></li>
+		</ul>
+		</header>
+		<table width="95%" border="0" cellpadding="3" cellspacing="1"
+			class="toolBar" align="center">
+			<tr align=left class="colom">
+				<td colspan="2" height=35>添加服务</td>
+			</tr>
+			<tr class=even height=40>
+				<td width='100' align='right' nowrap>服务名&nbsp;</td>
+				<td bgcolor='#ffffff'><input type="text" name="name"><font
+					color=#ff0000>*</font>
+			</tr>
+			<tr class=even height=40>
+				<td width='100' align='right' nowrap>价格&nbsp;</td>
+				<td bgcolor='#ffffff'><input type="text" name="price"><font
+					color=#ff0000>*</font>
+			</tr>
+			<tr class=even height=40>
+				<td width='100' align='right' nowrap>服务员&nbsp;</td>
+				<td bgcolor='#ffffff'><input type="text" name="cid"><font
+					color=#ff0000>*</font>
+			</tr>
+			<tr class=even height=40>
+				<td width='100' align='right' nowrap>图片&nbsp;</td>
+				<td bgcolor='#ffffff'><input type="file" cols=30 rows=5
+					name="file"></td>
+			</tr>
+			<tr class=even height=40>
+				<td width='100' align='right' nowrap>简介&nbsp;</td>
+				<td bgcolor='#ffffff'><textarea cols=30 rows=5 name="intro"></textarea>
+				</td>
+			</tr>
+
+
+			<tr class=even>
+				<td height=35 colspan="2"><input type="submit" value="提交"
+					method="post" action="/web/AddServer"> <input
+					class="input" type="button" value="返回"
+					onclick="javascript:history.go(-1)"></td>
+			</tr>
+		</table>
+	</form>
+	<iframe name='hideFrame' style="display: none"></iframe>
+
+	<script language="javascript">
+		var now = new Date();
+		frmAction.tTime.value = now.getFullYear() + "-" + (now.getMonth() + 1)
+				+ "-" + now.getDate();
+	</script>
+</body>
+</html>

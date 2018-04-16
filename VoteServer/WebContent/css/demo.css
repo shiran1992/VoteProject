@@ -1,0 +1,111 @@
+A:LINK{ color:#313163;font: 12px 宋体;text-decoration:none;}
+
+A:VISITED{ color:#313163;font:12px 宋体;text-decoration:none;}
+
+A:HOVER{color:#d53030;font: 12px 宋体;text-decoration:none;}
+
+.tex001{
+      font-family: "宋体"; font-size: 12px; line-height: 150%; color: #000066;
+      text-decoration:none
+      }
+.tex002{
+     font-family: "宋体"; font-size: 12px; line-height: 150%; color:#999999
+     }
+.tex003{
+     font-family: "宋体"; font-size: 12px; line-height: 150%; color:#000000
+     }
+.tex004{
+     font-family: "宋体"; font-size: 12px; line-height: 150%; color: #666666
+     }
+.tex005 {
+      font-family:"宋体"; font-size: 14px; line-height: 150%;
+      font-weight: bold; color: #333399
+     }
+.tex006{
+     font-family:"宋体"; font-size: 12px; line-height: 150%; color: #ffffff
+     }
+.tex007{
+     font-family: "宋体"; font-size: 14px; line-height: 150%; color: red; text-decoration:none
+    }
+.tex008{
+      font-family: "宋体"; font-size: 12px; line-height: 150%; color: red; text-decoration:none
+    }
+.red{
+    font-family: "宋体"; font-size: 12px; line-height: 150%; color: #CC0000
+    }
+.blue {
+    font-family: "宋体"; font-size: 12px; line-height: 150%; color: #333399; text-decoration: none
+    }
+.black {
+    font-family: "宋体"; font-size: 12px; line-height: 150%; color: #666666; text-decoration: none
+   }
+.tex {
+    font-family: "宋体"; font-size: 12px; line-height: 150%; color: #000000; text-decoration: none
+   }
+
+
+.toolBar {
+	background:		ButtonFace;
+	border-style:		solid;
+	border-width:		1px;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:    ButtonShadow;
+	font-family: "宋体";    font-size: 12px;
+
+}
+
+.toolTable {
+
+	border-style:		solid;
+	border-width:		1px;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:    ButtonShadow;
+	font-family: "宋体";    font-size: 12px;
+
+}
+
+/* extra rules for even and odd rows */
+.colom {
+	background:		ButtonFace;
+	border-style:		solid;
+	border-width:		1px;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:    ButtonShadow;
+	font-family: "宋体";    font-size: 12px;
+
+}
+
+.even {
+	background:	#eee;
+}
+
+.odd {
+
+}
+
+/* */
+.INPUT {
+        width:                  70px;
+	border-width:		1px;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:    ButtonShadow;
+}
+.ChkBox {
+	border-width:		1px;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:    ButtonShadow;
+}
+
+
+
+
