@@ -13,16 +13,12 @@ import App from '../App';
 import Toast from 'react-native-root-toast';
 import RegisterScreen from './RegisterScreen';
 import FindBackPasswordScreen from './FindBackPasswordScreen';
-let StaticData = require('../../config/static_data');
-let API = require('../../utils/api');
+const StaticData = require('../../config/static_data');
+const API = require('../../utils/ApiUtil');
 let Application = require('../../utils/Application');
 let Dimensions = require('Dimensions');
 let widths = Dimensions.get('window').width;
 let heights = Dimensions.get('window').height;
-let select = [
-  require('../../img/login/remenber_password_noselect@2x.png'),
-  require('../../img/login/remenber_password_selected@2x.png')
-];
 class LoginScreen extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +30,7 @@ class LoginScreen extends Component {
 
   componentDidMount() {
     let self = this;
-    AsyncStorage.getItem('userinfo', function (error, result) {
+    AsyncStorage.getItem('userInfo', function (error, result) {
       if (!error) {
         if (result) {
           let userinfo = JSON.parse(result);
@@ -48,24 +44,23 @@ class LoginScreen extends Component {
   }
 
   //点击登录按钮
-  onLoginPress() {
-    let url = StaticData.servlet + 'LoginServlet?';
-    let params = JSON.stringify({
+  async onLoginPress() {
+    let url = StaticData.servlet + 'LoginServlet';
+    let params = {
       password: this.state.password,
       phone: this.state.phone
-    });
-    API.call(url, params, (json)=> {
-      if (json) {
-        AsyncStorage.setItem('userinfo', JSON.stringify(json), (error)=> {
-        });
-        Application.setUserInfo(JSON.stringify(json));
-        this.props.navigator.push({
-          component: App
-        })
-      } else {
-        Toast.show('账号或者密码不对!');
-      }
-    });
+    };
+    let json = await API.callAPI(url, params, {method: 'GET'});
+    if (json) {
+      AsyncStorage.setItem('userInfo', JSON.stringify(json), (error)=> {
+      });
+      Application.setUserInfo(JSON.stringify(json));
+      this.props.navigator.push({
+        component: App
+      })
+    } else {
+      Toast.show('账号或者密码不对!');
+    }
   }
 
   //忘记密码

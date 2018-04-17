@@ -1,4 +1,4 @@
 let static_data={
-    servlet:'http://192.168.1.108:8080/ChildRecord/',
+    servlet:'http://192.168.10.191:8080/VoteServer/',
 };
 module.exports = static_data;

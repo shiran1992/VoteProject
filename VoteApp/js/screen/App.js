@@ -27,7 +27,8 @@ export default class App extends Component {
                     renderIcon={() => <Image source={require('../img/tab/tab_notice.png')}/>}
                     renderSelectedIcon={() => <Image source={require('../img/tab/tab_notice_selected.png')}/>}
                     onPress={() => this.setState({selectedTab: 'first'})}>
-                    <FirstPageScreen navigator={this.props.navigator}/>
+                  {/*<FirstPageScreen navigator={this.props.navigator}/>*/}
+                  <View style={{flex:1, backgroundColor: 'red'}}/>
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab == 'topic'}
@@ -36,7 +37,8 @@ export default class App extends Component {
                     renderIcon={() => <Image source={require('../img/tab/tab_classmates.png')}/>}
                     renderSelectedIcon={() => <Image source={require('../img/tab/tab_classmates_selected.png')}/>}
                     onPress={() => this.setState({selectedTab: 'topic'})}>
-                    <PostListScreen navigator={this.props.navigator}/>
+                  {/*<PostListScreen navigator={this.props.navigator}/>*/}
+                  <View style={{flex:1, backgroundColor: 'red'}}/>
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab == 'read'}
@@ -45,7 +47,8 @@ export default class App extends Component {
                     renderIcon={() => <Image source={require('../img/tab/tab_read.png')}/>}
                     renderSelectedIcon={() => <Image source={require('../img/tab/tab_read_selected.png')}/>}
                     onPress={() => this.setState({selectedTab: 'read'})}>
-                    <ReadListScreen navigator={this.props.navigator}/>
+                  {/*<ReadListScreen navigator={this.props.navigator}/>*/}
+                  <View style={{flex:1, backgroundColor: 'red'}}/>
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab == 'me'}
@@ -54,7 +57,8 @@ export default class App extends Component {
                     renderIcon={() => <Image source={require('../img/tab/tab_me.png')}/>}
                     renderSelectedIcon={() => <Image source={require('../img/tab/tab_me_selected.png')}/>}
                     onPress={() => this.setState({selectedTab: 'me'})}>
-                    <UserInfoScreen navigator={this.props.navigator}/>
+                  {/*<UserInfoScreen navigator={this.props.navigator}/>*/}
+                  <View style={{flex:1, backgroundColor: 'red'}}/>
                 </TabNavigator.Item>
             </TabNavigator>
         );
