@@ -27,7 +27,7 @@ public class UserDao {
 			// 3、获得PreparedStatement对象
 			prep = conn.prepareStatement(sql);
 			// 4、设置？的值
-			prep.setString(1, user.getName());
+			prep.setString(1, user.getName() == null ? "_"+user.getPhone() : user.getName());
 			prep.setString(2, user.getPhone());
 			prep.setString(3, user.getPassword());
 			prep.setInt(4, 0);
@@ -279,8 +279,8 @@ public class UserDao {
 			prep.setString(1, user.getName());
 			prep.setString(2,user.getPhone());
 			prep.setString(3, user.getPassword());
-			prep.setInt(6, user.getType());
-			prep.setInt(8, user.getUid());
+			prep.setInt(4, user.getType());
+			prep.setInt(5, user.getUid());
 			prep.executeUpdate();
 
 		} catch (Exception e) {

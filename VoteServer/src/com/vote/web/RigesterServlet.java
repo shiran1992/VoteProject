@@ -52,8 +52,8 @@ public class RigesterServlet extends HttpServlet {
 		User user = new User();
 		user.setPassword(password);
 		user.setPhone(phone);
-		boolean saveuserinfo = service.saveUserInfo(user);
-		if (saveuserinfo) {
+		boolean saveInfo = service.saveUserInfo(user);
+		if (saveInfo) {
 			response.getWriter().write("true");
 		} else {
 			response.getWriter().write("false");

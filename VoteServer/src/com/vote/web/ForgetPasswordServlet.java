@@ -42,6 +42,7 @@ public class ForgetPasswordServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		String phone = request.getParameter("phone");
 		String password = request.getParameter("password");
+		System.out.println(phone + "----" + password);
 		UserService service = new UserService();
 		User user = service.getUserByPhone(phone);
 		if(user!=null){

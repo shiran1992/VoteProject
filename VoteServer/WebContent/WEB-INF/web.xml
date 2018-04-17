@@ -13,7 +13,7 @@
     <description></description>
     <display-name>LoginServlet</display-name>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.LoginServlet</servlet-class>
+    <servlet-class>com.vote.web.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -23,7 +23,7 @@
     <description></description>
     <display-name>CommonServerServlet</display-name>
     <servlet-name>CommonServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.CommonServerServlet</servlet-class>
+    <servlet-class>com.vote.web.CommonServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CommonServerServlet</servlet-name>
@@ -33,7 +33,7 @@
     <description></description>
     <display-name>AddServerServlet</display-name>
     <servlet-name>AddServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.AddServerServlet</servlet-class>
+    <servlet-class>com.vote.web.AddServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddServerServlet</servlet-name>
@@ -43,7 +43,7 @@
     <description></description>
     <display-name>DeleteUserServlet</display-name>
     <servlet-name>DeleteUserServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.DeleteUserServlet</servlet-class>
+    <servlet-class>com.vote.web.DeleteUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteUserServlet</servlet-name>
@@ -53,7 +53,7 @@
     <description></description>
     <display-name>RigesterServlet</display-name>
     <servlet-name>RigesterServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.RigesterServlet</servlet-class>
+    <servlet-class>com.vote.web.RigesterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RigesterServlet</servlet-name>
@@ -63,7 +63,7 @@
     <description></description>
     <display-name>ForgetPasswordServlet</display-name>
     <servlet-name>ForgetPasswordServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ForgetPasswordServlet</servlet-class>
+    <servlet-class>com.vote.web.ForgetPasswordServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ForgetPasswordServlet</servlet-name>
@@ -73,7 +73,7 @@
     <description></description>
     <display-name>IsRigesterServlet</display-name>
     <servlet-name>IsRigesterServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.IsRigesterServlet</servlet-class>
+    <servlet-class>com.vote.web.IsRigesterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>IsRigesterServlet</servlet-name>
@@ -83,7 +83,7 @@
     <description></description>
     <display-name>ListServerServlet</display-name>
     <servlet-name>ListServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ListServerServlet</servlet-class>
+    <servlet-class>com.vote.web.ListServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListServerServlet</servlet-name>
@@ -93,7 +93,7 @@
     <description></description>
     <display-name>CreateOrderServlet</display-name>
     <servlet-name>CreateOrderServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.CreateOrderServlet</servlet-class>
+    <servlet-class>com.vote.web.CreateOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CreateOrderServlet</servlet-name>
@@ -103,7 +103,7 @@
     <description></description>
     <display-name>DeleteServerServlet</display-name>
     <servlet-name>DeleteServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.DeleteServerServlet</servlet-class>
+    <servlet-class>com.vote.web.DeleteServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteServerServlet</servlet-name>
@@ -113,7 +113,7 @@
     <description></description>
     <display-name>ChangeServerServlet</display-name>
     <servlet-name>ChangeServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ChangeServerServlet</servlet-class>
+    <servlet-class>com.vote.web.ChangeServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ChangeServerServlet</servlet-name>
@@ -123,7 +123,7 @@
     <description></description>
     <display-name>ListCleanersServlet</display-name>
     <servlet-name>ListCleanersServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ListCleanersServlet</servlet-class>
+    <servlet-class>com.vote.web.ListCleanersServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListCleanersServlet</servlet-name>
@@ -133,7 +133,7 @@
     <description></description>
     <display-name>GetOrdersServlet</display-name>
     <servlet-name>GetOrdersServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.GetOrdersServlet</servlet-class>
+    <servlet-class>com.vote.web.GetOrdersServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GetOrdersServlet</servlet-name>
@@ -143,7 +143,7 @@
     <description></description>
     <display-name>DeleteCleanerServlet</display-name>
     <servlet-name>DeleteCleanerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.DeleteCleanerServlet</servlet-class>
+    <servlet-class>com.vote.web.DeleteCleanerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteCleanerServlet</servlet-name>
@@ -153,7 +153,7 @@
     <description></description>
     <display-name>GetServersByCleanerIdServlet</display-name>
     <servlet-name>GetServersByCleanerIdServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.GetServersByCleanerIdServlet</servlet-class>
+    <servlet-class>com.vote.web.GetServersByCleanerIdServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GetServersByCleanerIdServlet</servlet-name>
@@ -163,7 +163,7 @@
     <description></description>
     <display-name>ShowServerServlet</display-name>
     <servlet-name>ShowServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ShowServerServlet</servlet-class>
+    <servlet-class>com.vote.web.ShowServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowServerServlet</servlet-name>
@@ -173,7 +173,7 @@
     <description></description>
     <display-name>Login</display-name>
     <servlet-name>Login</servlet-name>
-    <servlet-class>com.wangyuan.web.Login</servlet-class>
+    <servlet-class>com.vote.web.Login</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Login</servlet-name>
@@ -183,7 +183,7 @@
     <description></description>
     <display-name>ShowCleanerServlet</display-name>
     <servlet-name>ShowCleanerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ShowCleanerServlet</servlet-class>
+    <servlet-class>com.vote.web.ShowCleanerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowCleanerServlet</servlet-name>
@@ -193,7 +193,7 @@
     <description></description>
     <display-name>TodayTopServerServlet</display-name>
     <servlet-name>TodayTopServerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.TodayTopServerServlet</servlet-class>
+    <servlet-class>com.vote.web.TodayTopServerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>TodayTopServerServlet</servlet-name>
@@ -203,7 +203,7 @@
     <description></description>
     <display-name>WeekTopCleanerServlet</display-name>
     <servlet-name>WeekTopCleanerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.WeekTopCleanerServlet</servlet-class>
+    <servlet-class>com.vote.web.WeekTopCleanerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>WeekTopCleanerServlet</servlet-name>
@@ -213,7 +213,7 @@
     <description></description>
     <display-name>GetCleanerServlet</display-name>
     <servlet-name>GetCleanerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.GetCleanerServlet</servlet-class>
+    <servlet-class>com.vote.web.GetCleanerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GetCleanerServlet</servlet-name>
@@ -223,7 +223,7 @@
     <description></description>
     <display-name>ListOrdersServlet</display-name>
     <servlet-name>ListOrdersServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ListOrdersServlet</servlet-class>
+    <servlet-class>com.vote.web.ListOrdersServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListOrdersServlet</servlet-name>
@@ -233,7 +233,7 @@
     <description></description>
     <display-name>UpdateUserInfoServlet</display-name>
     <servlet-name>UpdateUserInfoServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.UpdateUserInfoServlet</servlet-class>
+    <servlet-class>com.vote.web.UpdateUserInfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdateUserInfoServlet</servlet-name>
@@ -243,7 +243,7 @@
     <description></description>
     <display-name>SaveHeadServlet</display-name>
     <servlet-name>SaveHeadServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.SaveHeadServlet</servlet-class>
+    <servlet-class>com.vote.web.SaveHeadServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SaveHeadServlet</servlet-name>
@@ -253,7 +253,7 @@
     <description></description>
     <display-name>ListServersServlet</display-name>
     <servlet-name>ListServersServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ListServersServlet</servlet-class>
+    <servlet-class>com.vote.web.ListServersServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListServersServlet</servlet-name>
@@ -263,7 +263,7 @@
     <description></description>
     <display-name>ListUserServlet</display-name>
     <servlet-name>ListUserServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ListUserServlet</servlet-class>
+    <servlet-class>com.vote.web.ListUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListUserServlet</servlet-name>
@@ -273,7 +273,7 @@
     <description></description>
     <display-name>DeleteOrderServlet</display-name>
     <servlet-name>DeleteOrderServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.DeleteOrderServlet</servlet-class>
+    <servlet-class>com.vote.web.DeleteOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteOrderServlet</servlet-name>
@@ -283,7 +283,7 @@
     <description></description>
     <display-name>ShowOrderServlet</display-name>
     <servlet-name>ShowOrderServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ShowOrderServlet</servlet-class>
+    <servlet-class>com.vote.web.ShowOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowOrderServlet</servlet-name>
@@ -293,7 +293,7 @@
     <description></description>
     <display-name>ChangeCleanerServlet</display-name>
     <servlet-name>ChangeCleanerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ChangeCleanerServlet</servlet-class>
+    <servlet-class>com.vote.web.ChangeCleanerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ChangeCleanerServlet</servlet-name>
@@ -303,7 +303,7 @@
     <description></description>
     <display-name>ChangeOrderServlet</display-name>
     <servlet-name>ChangeOrderServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.ChangeOrderServlet</servlet-class>
+    <servlet-class>com.vote.web.ChangeOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ChangeOrderServlet</servlet-name>
@@ -313,7 +313,7 @@
     <description></description>
     <display-name>AddCleanerServlet</display-name>
     <servlet-name>AddCleanerServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.AddCleanerServlet</servlet-class>
+    <servlet-class>com.vote.web.AddCleanerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddCleanerServlet</servlet-name>
@@ -323,7 +323,7 @@
     <description></description>
     <display-name>UpdateCommentServlet</display-name>
     <servlet-name>UpdateCommentServlet</servlet-name>
-    <servlet-class>com.wangyuan.web.UpdateCommentServlet</servlet-class>
+    <servlet-class>com.vote.web.UpdateCommentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdateCommentServlet</servlet-name>
