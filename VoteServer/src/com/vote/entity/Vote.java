@@ -7,6 +7,7 @@ public class Vote {
 	private String subtitle;
 	private String desc;
 	private String cover;
+	private User user;
 
 	public Vote() {
 		super();
@@ -14,13 +15,14 @@ public class Vote {
 	}
 
 	public Vote(int vid, String title, String subtitle, String desc,
-			String cover) {
+			String cover, User user) {
 		super();
 		this.vid = vid;
 		this.title = title;
 		this.subtitle = subtitle;
 		this.desc = desc;
 		this.cover = cover;
+		this.user = user;
 	}
 
 	public int getVid() {
@@ -63,10 +65,19 @@ public class Vote {
 		this.cover = cover;
 	}
 
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	@Override
 	public String toString() {
 		return "Vote [vid=" + vid + ", title=" + title + ", subtitle="
-				+ subtitle + ", desc=" + desc + ", cover=" + cover + "]";
+				+ subtitle + ", desc=" + desc + ", cover=" + cover + ", user="
+				+ user + "]";
 	}
 
 }

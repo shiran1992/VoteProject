@@ -21,13 +21,13 @@ public class UserDao {
 			// 1、联数据库
 			conn = DBConnection.getConnection();
 			// 2、SQL语句
-			String sql = "insert into user("
-					+ "name,phone,password,type) "
+			String sql = "insert into user(" + "name,phone,password,type) "
 					+ " values(?,?,?,?)";
 			// 3、获得PreparedStatement对象
 			prep = conn.prepareStatement(sql);
 			// 4、设置？的值
-			prep.setString(1, user.getName() == null ? "_"+user.getPhone() : user.getName());
+			prep.setString(1, user.getName() == null ? "_" + user.getPhone()
+					: user.getName());
 			prep.setString(2, user.getPhone());
 			prep.setString(3, user.getPassword());
 			prep.setInt(4, 0);
@@ -54,8 +54,8 @@ public class UserDao {
 		}
 		return true;
 	}
-	
-	//获取所有用户信息
+
+	// 获取所有用户信息
 	public List<User> getUsersByPage() {
 		Connection conn = null;
 		PreparedStatement prep = null;
@@ -84,7 +84,7 @@ public class UserDao {
 			// 一定要处理异常，异常的信息要存在日志文件
 			// 转化为你应用程序的异常，再抛出
 			// 抛异常说明注册失败
-			 throw new RuntimeException(e);
+			throw new RuntimeException(e);
 
 		} finally {
 			// 6、关闭资源
@@ -99,8 +99,8 @@ public class UserDao {
 		}
 		return users;
 	}
-	
-	//删除用户
+
+	// 删除用户
 	public Boolean deleteUserByUid(int uid) {
 		Connection conn = null;
 		PreparedStatement prep = null;
@@ -135,54 +135,53 @@ public class UserDao {
 		}
 		return true;
 	}
-	
-	// 通过id来搜索学生
-		public User getUserByUid(int userId) {
-			Connection conn =null;
-			PreparedStatement prep = null;
-			try {
-				// 1、
-				conn = DBConnection.getConnection();
-				// 2、
-				String sql = "select * from user where uid=?";
-				// 3、
-				prep = conn.prepareStatement(sql);
-				// 4、
-				prep.setInt(1, userId);
-				// 5、执行SQL语句
-				ResultSet rs = prep.executeQuery();
-				// 6、处理查询结果
-				// 创建一个学生对象
-				User u = new User();
-				// 取到数据 ==》 装到一个学生对象中
-				if (rs.next()) {
-					u.setUid(rs.getInt("uid"));
-					u.setName(rs.getString("name"));
-					u.setPhone(rs.getString("phone"));
-					u.setPassword(rs.getString("password"));
-					u.setType(rs.getInt("type"));
 
-				} else {
-					return null;
-				}
-				return u;
+	// 通过id来搜索学生
+	public User getUserByUid(int userId) {
+		Connection conn = null;
+		PreparedStatement prep = null;
+		try {
+			// 1、
+			conn = DBConnection.getConnection();
+			// 2、
+			String sql = "select * from user where uid=?";
+			// 3、
+			prep = conn.prepareStatement(sql);
+			// 4、
+			prep.setInt(1, userId);
+			// 5、执行SQL语句
+			ResultSet rs = prep.executeQuery();
+			// 6、处理查询结果
+			// 创建一个学生对象
+			User u = new User();
+			// 取到数据 ==》 装到一个学生对象中
+			if (rs.next()) {
+				u.setUid(rs.getInt("uid"));
+				u.setName(rs.getString("name"));
+				u.setPhone(rs.getString("phone"));
+				u.setPassword(rs.getString("password"));
+				u.setType(rs.getInt("type"));
+
+			} else {
+				return null;
+			}
+			return u;
+		} catch (Exception e) {
+			// 一定要处理异常，异常的信息要存在日志文件
+			// 转化为你应用程序的异常，再抛出
+			throw new RuntimeException(e);
+		} finally {
+			// 6、关闭资源
+			try {
+				if (prep != null)
+					prep.close();
+				if (conn != null)
+					conn.close();
 			} catch (Exception e) {
-				// 一定要处理异常，异常的信息要存在日志文件
-				// 转化为你应用程序的异常，再抛出
 				throw new RuntimeException(e);
-			} finally {
-				// 6、关闭资源
-				try {
-					if (prep != null)
-						prep.close();
-					if (conn != null)
-						conn.close();
-				} catch (Exception e) {
-					throw new RuntimeException(e);
-				}
 			}
 		}
-	
+	}
 
 	// 保存头像
 	public boolean saveHead(int userId, String path) {
@@ -221,7 +220,7 @@ public class UserDao {
 		}
 		return true;
 	}
-	
+
 	// 通过phone来搜索学生
 	public User getUserByPhone(String phone) {
 		Connection conn = null;
@@ -277,7 +276,7 @@ public class UserDao {
 			String sql = "UPDATE user SET name=?,phone=?,password=?,type=? WHERE uid=?";
 			prep = conn.prepareStatement(sql);
 			prep.setString(1, user.getName());
-			prep.setString(2,user.getPhone());
+			prep.setString(2, user.getPhone());
 			prep.setString(3, user.getPassword());
 			prep.setInt(4, user.getType());
 			prep.setInt(5, user.getUid());
