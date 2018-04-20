@@ -1,5 +1,5 @@
 let colors = {
-    navigatorBG:      '#DD4F43',                //用于导航栏和状态栏底色
+    navigatorBG:      '#2F2E35',                //用于导航栏和状态栏底色
     commonBG:         '#f4f4f4',                //ScrollView, ListView, TableView底色 （Section应为透明或者此颜色）
     tarBarBG:         '#f9f9f9',                //底部标签栏底色
     topTabBG:         '#ffffff',                //顶部标签栏背景色

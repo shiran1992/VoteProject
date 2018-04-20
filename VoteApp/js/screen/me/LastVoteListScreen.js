@@ -6,7 +6,6 @@ import {
   StyleSheet,
   TextInput,
   ListView,
-  RefreshControl,
   TouchableWithoutFeedback,
   TouchableHighlight
 } from 'react-native';
@@ -20,13 +19,12 @@ let Dimensions = require('Dimensions');
 let widths = Dimensions.get('window').width;
 let heights = Dimensions.get('window').height;
 
-class FirstPageScreen extends Component {
+class LastVoteListScreen extends Component {
   constructor(props) {
     super(props);
     let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: ds.cloneWithRows([]),
-      isRefreshing: false
+      dataSource: ds.cloneWithRows([])
     };
   }
 
@@ -36,16 +34,15 @@ class FirstPageScreen extends Component {
 
   //获取数据
   async getVoteList() {
-    this.setState({
-      isRefreshing: true
-    });
-    let url = StaticData.servlet + 'GetAllVoteServlet';
-    let json = await API.callAPI(url, {}, {method: 'GET'});
+    let url = StaticData.servlet + 'GetLastVoteServlet';
+    let params = {
+      uid: JSON.parse(Application.getUserInfo()).uid
+    };
+    let json = await API.callAPI(url, params, {method: 'GET'});
     if (json) {
       var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
       this.setState({
-        dataSource: ds.cloneWithRows(json),
-        isRefreshing: false
+        dataSource: ds.cloneWithRows(json)
       })
     }
   }
@@ -59,14 +56,9 @@ class FirstPageScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <NavigatorBar title={'投票中心'}/>
+        <NavigatorBar title={'参与的投票'} leftText={'返回'} leftPress={()=>{this.props.navigator.pop();}}/>
         <View style={{flex: 1}}>
           <ListView
-            refreshControl={
-              <RefreshControl
-                refreshing={this.state.isRefreshing}
-                onRefresh={this.getVoteList.bind(this)}
-              />}
             enableEmptySections={true}
             dataSource={this.state.dataSource}
             renderRow={this.renderRow.bind(this)}
@@ -82,4 +74,4 @@ const styles = StyleSheet.create({
     flex: 1
   }
 });
-export default FirstPageScreen;
+export default LastVoteListScreen;

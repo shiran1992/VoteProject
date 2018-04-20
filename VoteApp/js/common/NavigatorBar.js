@@ -35,7 +35,7 @@ class NavigatorBar extends Component {
         return (
             <View
                 style={{
-                    height: 60,
+                    height: 50,
                     width: widths,
                     backgroundColor: Colors.navigatorBG,
                     paddingHorizontal: 20,
@@ -43,12 +43,12 @@ class NavigatorBar extends Component {
                     alignItems: 'center'
                 }}>
                 <Text onPress={()=> {
-                    this.props.leftPress()
-                }} style={{color: 'white', fontSize: 16}}>{this.state.leftText}</Text>
+                  this.props.leftPress && this.props.leftPress()
+                }} style={{color: 'white', fontSize: 16, width: 50}}>{this.state.leftText}</Text>
                 <Text style={{flex: 1, textAlign: 'center', color: 'white', fontSize: 20}}>{this.state.title}</Text>
                 <Text onPress={()=> {
-                    this.props.rightPress()
-                }} style={{color: 'white', fontSize: 16}}>{this.state.rightText}</Text>
+                  this.props.rightPress && this.props.rightPress()
+                }} style={{color: 'white', fontSize: 16, width: 50, textAlign: 'right'}}>{this.state.rightText}</Text>
             </View>
         );
     }

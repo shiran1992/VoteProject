@@ -55,20 +55,17 @@ export function callAPI(url, params, config){
   return Promise.race([promiseRetrys, promiseTimeout]);
 }
 
-export function uploadImage(url, imgs, params) {
+export function uploadImage(url, img, params) {
   return new Promise(function (resolve, reject) {
     let formData = new FormData();
     for (let key in params) {
       formData.append(key, params[key]);
     }
-    let images = Array.isArray(imgs) ? imgs : [imgs];
-    for (let i = 0; i < images.length && images[i]; i++) {
-      let uri = images[i];
-      let index = uri.lastIndexOf('\/');
-      let name  = uri.substring(index + 1, uri.length);
-      let file = {uri: images[i], type: 'multipart/form-data', name: name};
-      formData.append('image[]', file);
-    }
+    let uri = img;
+    let index = uri.lastIndexOf('\/');
+    let name  = uri.substring(index + 1, uri.length);
+    let file = {uri: uri, type: 'multipart/form-data', name: name};
+    formData.append('image', file);
     fetch(url, {
       method: 'POST',
       headers: {
